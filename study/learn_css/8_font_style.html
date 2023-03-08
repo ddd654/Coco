@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
+    /* font-family: 'Julee', cursive; */
+
+    html {
+      /* font-family: serif, monospace; */
+      font-family: 'Julee', cursive;
+      font-size: 16px;
+    }
+    .title {
+      color: rgb(157, 255, 65);
+      font-size: 18px;
+    }
+    .content {
+      border: 1px solid black;
+      font-size: 20px;
+    }
+    .font_italic {
+      font-style: italic;
+    }
+    .font_weight_bold {
+      font-weight: bold;
+    }
+    .font_weight_300 {
+      font-weight: 300;
+    }
+    .font_vairant {
+      font-variant: small-caps;
+    }
+    .subtitle_rem {
+      font-size: 2rem;
+      /* html의 폰트 사이즈가 16px 이여서 2rem은 32px 이다 */
+      /* 최상의 사이즈의 몇배  */
+    }
+    .subtitle_em {
+      font-size: 2em;
+      /* html 폰트 사이즈의 2배인 32px이 적용된다 */
+      /* 현재 자신의 사이즈의 몇배 */
+    }
+    .article {
+      font-size: 16px;
+    }
+
+    .width {
+      width: 100vw;
+      height: 100px;
+      background-color: yellow;
+    }
+    .height {
+      width: 100px;
+      height: 20vh;
+      background-color: blue;
+    }
+  </style>
+  <body>
+    <h2 class="title">와플대학</h2>
+    <p class="content">딸기와플은 생딸기가 들어간다</p>
+    <p class="content font_italic">키위 와플</p>
+    <p class="content font_weight_bold">망고 와플</p>
+    <p class="content font_weight_300">딸기 와플</p>
+    <p class="content font_weight_blod">바나나 와플</p>
+    <p class="content font_variant">DODO, dodo</p>
+
+    <hr />
+    <h2>px</h2>
+    <p class="subtitle">사과</p>
+
+    <h2>rem</h2>
+    <p class="subtitle_rem">사과</p>
+
+    <h2>em</h2>
+    <div class="article">
+      <p class="subtitle_em">사과</p>
+    </div>
+    <hr />
+
+    <!-- viewport width -->
+    <h2>vw</h2>
+    <div class="width"></div>
+    <!-- viewport height -->
+    <h2>vh</h2>
+    <div class="height"></div>
+  </body>
+</html>
