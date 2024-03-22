@@ -30,34 +30,26 @@
     <h1><a href="index.html" style="background-color: whitesmoke;;">Javascript</a></h1>
 
 
-    <input type="button" value="Day" onclick="
-    document.querySelector('#bg_color').style.backgroundColor = 'white'
-    document.querySelector('#bg_color').style.color = 'black'
-    ">
 
-    <input type="button" value="Night" onclick="
+    <input id="night_day" type="button" value="night" onclick="
+    if (document.querySelector('#night_day').value === 'night') {
     document.querySelector('#bg_color').style.backgroundColor = 'black'
     document.querySelector('#bg_color').style.color = 'white'
-    ">
-
-    <input id="day_night" type="button" value="Day" onclick="
-    if (value=Day) {
-    document.querySelector('#bg_color').style.backgroundColor = 'white'
-    document.querySelector('#bg_color').style.color = 'black'
+    document.querySelector('#night_day').value = 'day'
     } else {
         document.querySelector('#bg_color').style.backgroundColor = 'white'
         document.querySelector('#bg_color').style.color = 'black'
+        document.querySelector('#night_day').value = 'night'
     }
     ">
-    <h1>11</h1>
+
+
     <h2>냠냠</h2>
     <h3>223324</h3>
     123aaaaaaaa
-    ssssssssssss
-    aaaaaaaa11
     맛있는 갈비
     커밋하고 푸쉬하기\
-    
+
     <h3>이부분을 추가했어</h3>
     <h3>이부분을 추가했어어</h3>
 
@@ -85,7 +77,6 @@
         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
         sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-
 
 
 
