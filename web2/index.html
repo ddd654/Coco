@@ -30,7 +30,7 @@
     <h1><a href="index.html" style="background-color: whitesmoke;;">Javascript</a></h1>
 
 
- 
+
     <input id="night_day" type="button" value="night" onclick="
     if (document.querySelector('#night_day').value === 'night') {
     document.querySelector('#bg_color').style.backgroundColor = 'black'
@@ -43,6 +43,18 @@
     }
     ">
 
+    <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('#bg_color');
+    if (this.value === 'night') {
+    target.style.backgroundColor = 'black'
+    target.style.color = 'white'
+    this.value = 'day'
+    } else {
+        target.style.backgroundColor = 'white'
+        target.style.color = 'black'
+        this.value = 'night'
+    }
+    ">
 
     <h2>냠냠</h2>
     <h3>223324</h3>
