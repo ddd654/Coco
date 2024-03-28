@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coco</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .js {
-            font-weight: bold;
-            color: red;
-        }
+      .js {
+        font-weight: bold;
+        color: red;
+      }
 
-        #color1 {
-            color: green;
-        }
+      #color1 {
+        color: green;
+      }
 
-        /*태그의 우선순위는 낮다*/
-        span {
-            color: blue;
-        }
+      /*태그의 우선순위는 낮다*/
+      span {
+        color: blue;
+      }
     </style>
-</head>
+  </head>
 
+  <!--html주석-->
 
-<!--html주석-->
-
-<body id="bg_color">
+  <body id="bg_color">
     <h1><a href="index.html" style="">Javascript</a></h1>
 
-
-
-    <input id="night_day" type="button" value="night" onclick="
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="
     if (document.querySelector('#night_day').value === 'night') {
     document.querySelector('#bg_color').style.backgroundColor = 'black'
     document.querySelector('#bg_color').style.color = 'white'
@@ -41,77 +41,89 @@
         document.querySelector('#bg_color').style.color = 'black'
         document.querySelector('#night_day').value = 'night'
     }
-    ">
+    "
+    />
 
-    <input id="night_day" type="button" value="night" onclick="
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="
     var target = document.querySelector('#bg_color');
     if (this.value === 'night') {
     target.style.backgroundColor = 'black'
     target.style.color = 'white'
     this.value = 'day'
+
+    var alist = document.querySelectorAll('a')
+    var i = 0
+    while(i < alist.length){
+        alist[i].style.color = 'yellow'
+        i = i +1
+    }
+
     } else {
         target.style.backgroundColor = 'white'
         target.style.color = 'black'
         this.value = 'night'
+
+
+        var alist = document.querySelectorAll('a')
+    var i = 0
+    while(i < alist.length){
+        alist[i].style.color = 'yellow'
+        i = i +1
     }
-    ">
+}
+    "
+    />
 
     <h2>냠냠</h2>
     <h3>223324</h3>
-    <p>
-        123aaaaaaaa
-        맛있는 갈비
-        커밋하고 푸쉬하기\
-    </p>
+    <p>맛있는 갈비 커밋하고 푸쉬하기\</p>
 
     <h3>이부분을 추가했어</h3>
 
-
-    12312[;-0ik8l80l88p8l80]
-    12312
-
-
+    12312[;-0ik8l80l88p8l80] 12312
 
     <ol>
-        <li><a href="">let</a></li>
-        <li><a href="">it</a></li>
-        <li><a href="">be</a></li>
+      <li><a href="">let</a></li>
+      <li><a href="">it</a></li>
+      <li><a href="">be</a></li>
     </ol>
 
-    <input type="button" value="h1" onclick="alert('click message')">
-    <input type="text" onchange="alert('changed')">
-    <input type="text" onkeydown="alert('key down~')">
+    <input type="button" value="h1" onclick="alert('click message')" />
+    <input type="text" onchange="alert('changed')" />
+    <input type="text" onkeydown="alert('key down~')" />
 
     <p>
-        Lorem <span class="js" id="color1">ipsum</span> dolor <span class="js">sit</span> amet, consectetur adipiscing
-        elit, <span>sed</span> do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-        sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem <span class="js" id="color1">ipsum</span> dolor
+      <span class="js">sit</span> amet, consectetur adipiscing elit,
+      <span>sed</span> do eiusmod tempor incididunt ut labore et dolore magna
+      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.
     </p>
-
-
-
 
     <h1 class="js1">comparison</h1>
     <h2 class="js2">===</h2>
     <h3 class="js3">1===1</h3>
     <script>
-        document.write(1 === 1); //true
+      document.write(1 === 1); //true
     </script>
 
     <h3 class="js3">1===2</h3>
     <script>
-        document.write(1 === 2); //true
+      document.write(1 === 2); //true
     </script>
 
     <h3 class="js3">1&lt;1</h3>
     <script>
-        document.write(1 < 1); //true
+      document.write(1 < 1); //true
     </script>
 
     <script src="javascript.js"></script>
-</body>
-
+  </body>
 </html>
