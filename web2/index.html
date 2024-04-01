@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>coco</title>
     <link rel="stylesheet" href="style.css" />
+
     <style>
       .js {
         font-weight: bold;
@@ -20,6 +21,35 @@
         color: blue;
       }
     </style>
+
+    <script>
+      function night_day_switch(self) {
+        var target = document.querySelector("#bg_color");
+        if (this.value === "night") {
+          target.style.backgroundColor = "black";
+          target.style.color = "white";
+          this.value = "day";
+
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "yellow";
+            i = i + 1;
+          }
+        } else {
+          target.style.backgroundColor = "white";
+          target.style.color = "black";
+          this.value = "night";
+
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = "black";
+            i = i + 1;
+          }
+        }
+      }
+    </script>
   </head>
 
   <!--html주석-->
@@ -32,50 +62,23 @@
       type="button"
       value="night"
       onclick="
-    if (document.querySelector('#night_day').value === 'night') {
-    document.querySelector('#bg_color').style.backgroundColor = 'black'
-    document.querySelector('#bg_color').style.color = 'white'
-    document.querySelector('#night_day').value = 'day'
-    } else {
-        document.querySelector('#bg_color').style.backgroundColor = 'white'
-        document.querySelector('#bg_color').style.color = 'black'
-        document.querySelector('#night_day').value = 'night'
-    }
-    "
+  if (document.querySelector('#night_day').value === 'night') {
+  document.querySelector('#bg_color').style.backgroundColor = 'black'
+  document.querySelector('#bg_color').style.color = 'white'
+  document.querySelector('#night_day').value = 'day'
+  } else {
+      document.querySelector('#bg_color').style.backgroundColor = 'white'
+      document.querySelector('#bg_color').style.color = 'black'
+      document.querySelector('#night_day').value = 'night'
+  }
+  "
     />
 
     <input
       id="night_day"
       type="button"
       value="night"
-      onclick="
-    var target = document.querySelector('#bg_color');
-    if (this.value === 'night') {
-    target.style.backgroundColor = 'black'
-    target.style.color = 'white'
-    this.value = 'day'
-
-    var alist = document.querySelectorAll('a')
-    var i = 0
-    while(i < alist.length){
-        alist[i].style.color = 'yellow'
-        i = i +1
-    }
-
-    } else {
-        target.style.backgroundColor = 'white'
-        target.style.color = 'black'
-        this.value = 'night'
-
-
-        var alist = document.querySelectorAll('a')
-    var i = 0
-    while(i < alist.length){
-        alist[i].style.color = 'black'
-        i = i +1
-    }
-}
-    "
+      onclick="night_day_switch(this)"
     />
 
     <h2>냠냠</h2>
