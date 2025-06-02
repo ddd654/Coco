@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* index - header */
+.menu {
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1;
+
+  background-color: #BC6C25;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  cursor: pointer;
+}
+
+.menu:active span:nth-child(1) {
+  background-color: red;
+  /* 각도 */
+  transform: rotate(45deg) translate(0, 10px);
+}
+
+.menu:active span:nth-child(2) {
+  background-color: red;
+
+}
+
+.menu:active span:nth-child(3) {
+  background-color: red;
+
+}
+
+.menu span {
+  width: 40px;
+  height: 4px;
+  background: black;
+
+  display: block;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* 의미부여: 
+ex)이걸 배우고 직접 만드는건 
+내 활력소이자 목표야 
+ex) 숨쉬는 것 조차 행복이야
+ex) 어떤 행동이든 의미가 있어*/
