@@ -3,54 +3,54 @@
 
 //만들것: menu를 클릭했을때 안쪽 span 태그들의 각도가 바뀌어야한다
 const menu = document.querySelector('.menu');
-const menu_span = document.querySelector('.menu span');
+const menuSpan = document.querySelector('.menu span');
 
-menu.addEventListener('click', ()=>{
+menu.addEventListener('click', () => { //menu를 클릭하면 menu모양이 바뀌는 이벤트
   const firstSpan = menu.firstElementChild;
   const lastSpan = menu.lastElementChild;
 
-  firstSpan.style.transform = 'rotate(45deg)';
-  //x축 y축 위치 오른쪽 아래로
+  const currentTransform = firstSpan.style.transform;
+
+  if (currentTransform == 'rotate(45deg) scale(1.1, 1)') {//클릭했을때 이미 45도면
+    firstSpan.style.transform = 'rotate(0deg) scale(1.0, 1)';
+  } else {
+    firstSpan.style.transform = 'rotate(45deg) scale(1.1, 1)'
+  }
 })
 
 
-// const li = document.querySelectorAll('li');
-// console.log('li All은?',li);
+// -- 
+// cloneNode, remove, 태그의 부모 형제 자식 선택 방법을 했음
 
-// const li_tag= document.getElementsByTagName('li');
-// console.log(li_tag);
+// --
+const openedMenu = document.querySelector('.openedMenu');
+openedMenu.style.width = '200px';
+openedMenu.style.height = '';
+openedMenu.style.color = 'white';
+// openedMenu.style.backgroundColor = 'greenyellow';
+openedMenu.style['fontSize'] = '20px'; //다르게 사용하는 방법
+openedMenu.style.border = '10px solid black'
 
-// const liList1 = document.querySelector('li');
-// const liList2 = document.getElementsByTagName('li');
 
-// console.log(liList1);
-// console.log(liList2);
+console.log(openedMenu.className);
+openedMenu.className = 'bg-red';
+console.log(openedMenu.classList);
+openedMenu.classList.remove('bg-red');
 
-// console.log(document.querySelector('li:nth-of-type(3)').innerHTML)
+// setInterval(()=>{
+// openedMenu.classList.toggle('bg-red');
+// }, 1000)
 
-// for(let li of document.querySelectorAll('li')){
-//   li.style.backgroundColor = 'black';
-// }
+const color = document.querySelector('#color');
 
-// const red = document.getElementById('red')
-// console.log(red.parentNode);
-// console.log(red.parentElement);
+color.onclick = function (e) {
+  console.log(e.target);
+  const target = e.target;
+  console.log(target.tagName);
 
-// console.log(document.documentElement.parentNode);
-// console.log(document.documentElement.parentElement);
-
-// console.log(menu.childNodes); //노드 리스트 , 실시간
-// console.log(menu.children); //실시간 요소 노드
-// console.log(menu.firstChild);
-// console.log(menu.firstElementChild);
-// console.log(menu.lastElementChild);
-
-// const blue = document.getElementById('blue');
-// console.log(blue.previousSibling);
-// console.log(blue.nextSibling);
-
-// console.log('hmmm',blue.nextElementSibling);
-
+  if (target.tagName !== 'LI') { return } //LI 태그가 아니면 아무일도
+  target.classList.toggle('txt-pink');
+}
 
 
 

@@ -19,11 +19,27 @@
 
   cursor: pointer;
 }
+
+.menu:hover {
+  background-color: #93551e;
+}
+
+.menu:active {
+  background-color: white;
+}
+
+/* 바꾸기용 속성 */
+.bg-red {
+  background-color: red;
+}
+.txt-pink{
+  color: pink;
+}
+
 .menu span:nth-child(1) {
   background-color: red;
-  /* 각도 */
   transition: 0.4s ease;
-
+  transform-origin: left center;
 }
 
 .menu span:nth-child(2) {
@@ -44,6 +60,11 @@
   display: block;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.openedMenu {
+  border: 1px solid black;
+
 }
 
 /* 의미부여: 
