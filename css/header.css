@@ -1,14 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
 /* index - header */
 .menu {
   border: 1px solid black;
   border-radius: 100%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   aspect-ratio: 1;
   background-color: #BC6C25;
 
@@ -28,47 +24,41 @@
   background-color: white;
 }
 
-/* 바꾸기용 속성 */
-.bg-red {
-  background-color: red;
-}
-.txt-pink{
-  color: pink;
-}
-
-.menu span:nth-child(1) {
-  background-color: red;
-  transition: 0.4s ease;
-  transform-origin: left center;
-}
-
-.menu span:nth-child(2) {
-  background-color: red;
-
-}
-
-.menu span:nth-child(3) {
-  background-color: red;
-
-}
-
 .menu span {
-  width: 40px;
+  width: 35px;
   height: 4px;
   background: black;
+  border-radius: 10px;
 
-  display: block;
-  flex-direction: column;
-  justify-content: space-evenly;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform-origin: center;
+}
+
+.menu span:nth-child(1),
+.menu span:nth-child(3) {
+  transform: rotate(0deg) translate(0px, 0px);
 }
 
 .openedMenu {
   border: 1px solid black;
+  background-color: yellowgreen;
+  width: 300px;
+  height: 300px;
 
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* 의미부여: 
-ex)이걸 배우고 직접 만드는건 
-내 활력소이자 목표야 
-ex) 숨쉬는 것 조차 행복이야
-ex) 어떤 행동이든 의미가 있어*/
+/* 바꾸기용 속성 */
+/* .bg-red {
+  background-color: red;
+}
+
+.txt-pink {
+  color: pink;
+}
+
+.bg-green {
+  background-color: green;
+} */
