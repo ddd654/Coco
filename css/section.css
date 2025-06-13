@@ -1,0 +1,42 @@
+/* section 부분 */
+
+section {
+  border: 2px solid black;
+}
+
+/* section 메뉴크기 1:1 비율 */
+section ul {
+  border: 2px solid brown;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+section ul li a {
+  border: 2px solid black;
+  display: block;
+
+  height: 20vh;
+  min-height: 50px;
+  max-height: 200px;
+}
+
+section ul li:nth-child(odd) {
+  margin-left: 20px;
+}
+
+section ul li:nth-child(even) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+//--------------------
