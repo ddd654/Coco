@@ -24,10 +24,10 @@ section ul {
 section ul li a {
   border: 2px solid black;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: space-between;
 
-  padding: 10px 0px 10px 10px;
+  padding: 10px 10px 10px 10px;
   min-height: 50px;
   max-height: 200px;
   width: 20vw;
@@ -39,8 +39,12 @@ section ul li a {
 
   text-decoration: none;
   color: inherit;
+
 }
 
+section ul li a span{
+  margin: 0px auto;
+}
 
 section ul li:nth-child(odd) {
   margin-right: 15px;
@@ -52,24 +56,25 @@ section ul li:nth-child(even) {
   margin-top: 30px;
 }
 
+/* 색깔 */
 section ul li:nth-child(1) a {
-  background-color: #606C38;
+  /* background-color: #606C38; */
 }
 
 section ul li:nth-child(2) a {
-  background-color: #283618;
+  /* background-color: #283618; */
 }
 
 section ul li:nth-child(3) a {
-  background-color: #FEFAE0;
+  /* background-color: #FEFAE0; */
 }
 
 section ul li:nth-child(4) a {
-  background-color: #DDA15E;
+  /* background-color: #DDA15E; */
 }
 
 section ul li:nth-child(5) a {
-  background-color: #153666;
+  /* background-color: #153666; */
 }
 
 

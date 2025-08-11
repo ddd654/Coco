@@ -6,7 +6,7 @@ const openedMenu = document.querySelector('.openedMenu');
 let menuState = false;
 
 //menu를 클릭하면 메뉴 펼쳐지는 이벤트
-menu.addEventListener('click', () => { 
+menu.addEventListener('click', () => {
   const firstSpan = menu.firstElementChild;
   const midSpan = menu.children[1];
   const lastSpan = menu.lastElementChild;
